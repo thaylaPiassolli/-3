@@ -1,0 +1,270 @@
+:root {
+  color-scheme: dark;
+  --bg: #120814;
+  --surface: #1b1122;
+  --surface-strong: #27172f;
+  --text: #f7e6f3;
+  --muted: #d3b5d3;
+  --accent: #ff7fb8;
+  --accent-strong: #ffb3d4;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top left, rgba(255, 126, 170, 0.14), transparent 18%),
+              radial-gradient(circle at 80% 10%, rgba(255, 214, 236, 0.08), transparent 16%),
+              linear-gradient(180deg, #220918 0%, #15040c 48%, #0e0409 100%);
+  color: var(--text);
+}
+
+.hero {
+  position: relative;
+  z-index: 0;
+}
+
+.page {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 18px 40px;
+}
+
+.hero {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(29, 18, 38, 0.92);
+  backdrop-filter: blur(14px);
+  border-radius: 34px;
+  padding: 40px 36px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+  margin-bottom: 32px;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.subtitle {
+  margin: 0 0 14px;
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.hero h1 {
+  margin: 0 0 14px;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(3.2rem, 7vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  color: #ffe4f6;
+  text-shadow: 0 0 16px rgba(255, 127, 184, 0.22);
+}
+
+.hero-text {
+  margin: 0;
+  max-width: 640px;
+  line-height: 1.8;
+  color: #d7b8d8;
+}
+
+.hero-note {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  color: #f5d2ea;
+  letter-spacing: 0.02em;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading span {
+  display: block;
+  color: #ff8cb8;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  color: #ffe8f3;
+}
+
+.countdown-section,
+.message-section,
+.music-section,
+.photos-section {
+  background: rgba(30, 16, 35, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 28px;
+  margin-bottom: 28px;
+  color: var(--text);
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.countdown-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 22px 16px;
+  text-align: center;
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.3);
+}
+
+.value {
+  display: block;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin-bottom: 6px;
+  color: #ffe4f6;
+}
+
+.label {
+  color: #d3b5d3;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+}
+
+.message-text,
+.music-info p,
+.photo-note {
+  margin: 0;
+  line-height: 1.8;
+  color: #d8bad8;
+}
+
+.music-card {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cover-frame {
+  width: 190px;
+  height: 190px;
+  min-width: 190px;
+  min-height: 190px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #472243 0%, #1b1229 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);  
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.music-info {
+  flex: 1 1 320px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  margin-top: 18px;
+  background: linear-gradient(135deg, #ff7fb8 0%, #d8437a 100%);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 16px 26px rgba(0, 0, 0, 0.32);
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.photo-card {
+  min-height: 160px;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: saturate(1.05) brightness(0.96);
+}
+
+.photo-card:hover .photo-image {
+  transform: scale(1.02);
+  filter: saturate(1.12) brightness(1);
+}
+
+.photo-card:hover .photo-image {
+  transform: scale(1.03);
+}
+
+.photo-note {
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 860px) {
+  .countdown-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .music-card,
+  .photos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 16px 14px 32px;
+  }
+
+  .hero,
+  .countdown-section,
+  .message-section,
+  .music-section,
+  .photos-section {
+    padding: 22px;
+  }
+
+  .countdown-card {
+    padding: 20px 14px;
+  }
+
+  .photos-grid {
+    grid-template-columns: 1fr;
+  }
+}
